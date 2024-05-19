@@ -3,222 +3,148 @@
 @tailwind utilities;
 
 @layer base {
-  @font-face {
-    font-family: "Dana";
-    font-style: normal;
-    font-weight: 100;
-    src: local("Dana"),
-      url("../fonts/dana/DanaFaNum-Thin.woff2") format("woff2");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Dana";
-    font-style: normal;
-    font-weight: 300;
-    src: local("Dana"),
-      url("../fonts/dana/DanaFaNum-Light.woff2") format("woff2");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Dana";
-    font-style: normal;
-    font-weight: 400;
-    src: local("Dana"),
-      url("../fonts/dana/DanaFaNum-Regular.woff2") format("woff2");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Dana";
-    font-style: normal;
-    font-weight: 500;
-    src: local("Dana"),
-      url("../fonts/dana/DanaFaNum-Medium.woff2") format("woff2");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Dana";
-    font-style: normal;
-    font-weight: 600;
-    src: local("Dana"),
-      url("../fonts/dana/DanaFaNum-DemiBold.woff2") format("woff2");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Dana";
-    font-style: normal;
-    font-weight: 700;
-    src: local("Dana"),
-      url("../fonts/dana/DanaFaNum-Bold.woff2") format("woff2");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Dana";
-    font-style: normal;
-    font-weight: 800;
-    src: local("Dana"),
-      url("../fonts/dana/DanaFaNum-ExtraBold.woff2") format("woff2");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Dana";
-    font-style: normal;
-    font-weight: 900;
-    src: local("Dana"),
-      url("../fonts/dana/DanaFaNum-Black.woff2") format("woff2");
-    font-display: swap;
-  }
     @font-face {
-      font-family: "Lalezar";
-      font-style: normal;
-      src: local("lalezar"),
-        url("../fonts/lalezar/Lalezar-Regular.woff2") format("woff2");
-      font-display: swap;
+        font-family: "Dana";
+        font-style: normal;
+        font-weight: 100;
+        src: local("Dana"),
+        url("../fonts/dana/DanaFaNum-Thin.woff2") format("woff2");
+        font-display: swap;
     }
-  * {
-    @apply font-Dana;
-  }
-  img {
-    @apply w-full h-auto;
-  }
-  body {
-    line-height:  1.7;
-  }
+    @font-face {
+        font-family: "Dana";
+        font-style: normal;
+        font-weight: 300;
+        src: local("Dana"),
+        url("../fonts/dana/DanaFaNum-Light.woff2") format("woff2");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Dana";
+        font-style: normal;
+        font-weight: 400;
+        src: local("Dana"),
+        url("../fonts/dana/DanaFaNum-Regular.woff2") format("woff2");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Dana";
+        font-style: normal;
+        font-weight: 500;
+        src: local("Dana"),
+        url("../fonts/dana/DanaFaNum-Medium.woff2") format("woff2");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Dana";
+        font-style: normal;
+        font-weight: 600;
+        src: local("Dana"),
+        url("../fonts/dana/DanaFaNum-DemiBold.woff2") format("woff2");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Dana";
+        font-style: normal;
+        font-weight: 700;
+        src: local("Dana"),
+        url("../fonts/dana/DanaFaNum-Bold.woff2") format("woff2");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Dana";
+        font-style: normal;
+        font-weight: 800;
+        src: local("Dana"),
+        url("../fonts/dana/DanaFaNum-ExtraBold.woff2") format("woff2");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Dana";
+        font-style: normal;
+        font-weight: 900;
+        src: local("Dana"),
+        url("../fonts/dana/DanaFaNum-Black.woff2") format("woff2");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Morabba";
+        font-style: normal;
+        font-weight: 400;
+        src: local("Morabba"),
+        url("../fonts/Morabba/WOFF2/Morabba-Light.woff2") format("woff2");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Morabba";
+        font-style: normal;
+        font-weight: 500;
+        src: local("Morabba"),
+        url("../fonts/Morabba/WOFF2/Morabba-Medium.woff2") format("woff2");
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "Morabba";
+        font-style: normal;
+        font-weight: 800;
+        src: local("Morabba"),
+        url("../fonts/Morabba/WOFF2/Morabba-Bold.woff2") format("woff2");
+        font-display: swap;
+    }
+    * {
+        @apply font-Dana;
+    }
+
+    img {
+        @apply w-full h-auto;
+    }
+
+    body {
+        line-height: 1.7;
+    }
 }
 
 @layer components {
-  .desktop-menu>ul {
-    @apply flex items-center gap-x-4 xl:gap-x-8 py-4 md:text-xs lg:text-sm xl:text-base;
-  }
-  .desktop-menu>ul li>a {
-    @apply text-tertiary-600 flex gap-x-1 items-center menu-btn;
-  }
-
-  .mobile-menu>ul {
-    @apply flex flex-col items-start gap-y-4 mt-6;
-  }
-
-  .mobile-menu>ul li a {
-    @apply text-tertiary-600 flex gap-x-1 items-center menu-btn;
-  }
-    .menu-btn {
-      @apply relative;
-      transition: 0.5s color linear;
+    @media only screen and (min-width: 700px) {
+        .showcase-light {
+            background: linear-gradient(0deg, rgb(243, 244, 246), rgba(243, 244, 246, 0)), url("../images/showcase.jpg");
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: right bottom;
+        }
+        .showcase-dark {
+            background: linear-gradient(0deg, rgb(39, 39, 42), rgba(39, 39, 42, 0)), url("../images/showcase.jpg");
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: right bottom;
+        }
     }
-  
-    .menu-btn::after {
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 1px;
-      background: #ff4500;
-      bottom: 0;
-      transform-origin: left;
-      transition: 0.4s transform linear;
-      transform: scale(0);
+    @media only screen and (max-width: 700px) {
+        .showcase-light {
+            background: linear-gradient(0deg, rgb(243, 244, 246), rgba(243, 244, 246, 0)), url("../images/showcase-md.jpg");
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: right bottom;
+        }
+        .showcase-dark {
+            background: linear-gradient(0deg, rgb(39, 39, 42), rgba(39, 39, 42, 0)), url("../images/showcase-md.jpg");
+            height: 100vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: right bottom;
+        }
     }
-  
-    .menu-btn:hover {
-      color: #ff4500;
+    .goto-play-light {
+        background-image: url("../images/audiochuck-light.png");
+        min-height: 400px;
+        background-size: cover;
     }
-  
-    .menu-btn:hover::after {
-      transform: scale(1);
-      transform-origin: right;
+    .goto-play-dark {
+        background-image: url("../images/audiochuck-dark.png");
+        min-height: 400px;
+        background-size: cover;
     }
-    .tabs-title.active {
-      @apply text-zinc-900 border-b border-b-zinc-800;
-    }
-    .headTabSlider {
-      @apply mt-6;
-    }
-    .headTabSlider > ul {
-      @apply flex gap-x-4 md:gap-x-8 justify-center items-center;
-    }
-    .headTabSlider > ul li.tab-category-slider {
-      @apply font-medium md:text-lg text-zinc-500 cursor-pointer hover:text-zinc-700 transition-all;
-    }
-    .headTabSlider>ul li.tab-category-slider.active{
-      @apply text-primary-600 font-bold text-xl relative;
-    }
-    .headTabSlider>ul li.tab-category-slider.active::after{
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background: #ff4500;
-      border-radius: 20px;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
-    .horizontal-slider .swiper-wrapper .swiper-slide {
-      @apply w-[280px];
-    }
-    .course-card {
-      @apply relative flex flex-col justify-between border shadow rounded-bl-2xl rounded-tr-2xl;
-    }
-    .course-card .card-pic {
-      @apply rounded-tr-2xl overflow-hidden;
-    }
-    .course-card .card-pic > a {
-      @apply block w-full h-36 overflow-hidden;
-    }
-    .course-card .card-pic>a > img {
-      @apply h-full object-cover hover:scale-110 transition-transform duration-700;
-    }
-    .course-card .card-body {
-      @apply bg-white flex flex-col justify-between gap-y-2 rounded-bl-2xl flex-grow;
-    }
-    .course-card .card-body .course-title > h2 {
-      @apply px-2 font-semibold text-zinc-800 hover:text-secondary-800 transition-colors line-clamp-2 my-2
-    }
-    .course-card .card-body .course-expert > p {
-      @apply text-sm px-4 text-justify line-clamp-3;
-    }
-    .course-card .card-body .course-info {
-      @apply px-4;
-    }
-    .course-card .card-body .course-info .course-info-item {
-      @apply flex items-center gap-x-1;
-    }
-    .course-card .card-body .course-footer {
-      @apply pt-2 border-t-2 border-dashed border-zinc-200 my-2 mt-auto;
-    }
-    .course-card .card-body .course-footer .course-price {
-      @apply px-4;
-    }
-    .course-card .card-body .course-footer .course-price .course-price-current {
-      @apply flex items-center gap-x-1;
-    }
-    .course-card a.course-btn {
-      @apply  absolute -left-2 bottom-7;
-      z-index: 10;
-    }
-    .course-card a.course-btn > span {
-      @apply bg-primary-500 hover:bg-primary-600 transition-colors text-white py-2 pr-8 pl-4;
-      clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
-      z-index: 2;
-    }
-    .course-card a.course-btn::after {
-      content: '';
-      width: 0px;
-      height: 0px;
-      border-top: 8px solid transparent;
-      border-bottom: 8px solid transparent;
-      border-right: 8px solid #c4592c;
-      position: absolute;
-      bottom: -14.2px;
-      left: 0px;
-      z-index: -1;
-    }
-    .konkor-section {
-      background-image: url('../images/site/time.jpg');
-      background-position: left top;
-      background-size: cover;
-      background-repeat: no-repeat;
-      min-height: 300px;
-    }
-}
-.showcaseSlider .swiper-pagination-bullet.swiper-pagination-bullet-active{
- background-color: #ff4500;
 }
