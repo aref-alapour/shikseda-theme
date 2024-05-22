@@ -11,3 +11,27 @@ toggleThemeBtns.forEach(btn => {
         }
     })
 })
+document.addEventListener("DOMContentLoaded", () => {
+const swiper_section = new Swiper(".section-slider", {
+    slidesPerView: "auto",
+    spaceBetween: 20,
+});
+    const swiper_cart_1 = new Swiper(".cart-slider-1", {
+        slidesPerView: "auto",
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+            nextEl: ".right-button-1",
+            prevEl: ".left-button-1",
+        },
+    });
+    const swiper_cart_2 = new Swiper(".cart-slider-2", {
+        slidesPerView: "auto",
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+            nextEl: ".right-button-2",
+            prevEl: ".left-button-2",
+        },
+    });
+});
